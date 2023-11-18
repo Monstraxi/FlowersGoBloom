@@ -10,12 +10,12 @@ project "FlowersGoBloom"
     includedirs {"%{include_path.SFML}"}
 
     filter "configurations:Debug"
-        defines "DEBUG"
+        defines {"DEBUG", "SFML_STATIC"}
         symbols "on"
         libdirs {"%{lib_path.SFMLD}"}
         links {link["SFMLD"]}
     filter "configurations:Release"
-        defines "RELEASE"
+        defines {"RELEASE", "SFML_STATIC"}
         optimize "on"
-        libdirs {"%{lib_path.SFMLD}"}
+        libdirs {"%{lib_path.SFMLND}"}
         links {link["SFMLND"]}

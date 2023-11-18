@@ -14,22 +14,22 @@ workspace "FlowersGoBloom"
     link = {}
     link["SFMLD"] = {
         "opengl32.lib",
+        "gdi32.lib",
         "freetype.lib",
         "winmm.lib",
-        "gdi32.lib",
+        "sfml-graphics-s-d.lib",
         "sfml-system-s-d.lib",
         "sfml-window-s-d.lib",
-        "sfml-graphics-s-d.lib",
     }
 
     link["SFMLND"] = {
         "opengl32.lib",
         "freetype.lib",
-        "winmm.lib",
         "gdi32.lib",
-        "sfml-system-d.lib",
-        "sfml-window-d.lib",
-        "sfml-graphics-d.lib",
+        "winmm.lib",
+        "sfml-graphics-s.lib",
+        "sfml-system-s.lib",
+        "sfml-window-s.lib",
     }
 
     include "FlowersGoBloom"

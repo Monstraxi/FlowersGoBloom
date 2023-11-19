@@ -1,4 +1,5 @@
 workspace "FlowersGoBloom"
+    cppdialect "C++latest"
     architecture "x64"
     configurations {"Debug", "Release"}
 

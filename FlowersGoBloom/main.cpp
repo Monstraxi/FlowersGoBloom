@@ -97,6 +97,14 @@ int main()
 		for (int i = 0; i < bg.getSize().y / 100; i++)
 		{
 			enemies[i].setPosition(bg.getPosition().x + enemyPos[i].x * 100 + 50, bg.getPosition().y + enemyPos[i].y * 100 + 50);
+			for (sf::RectangleShape& flower : flowers)
+			{
+				if (enemies[i].getPosition() == flower.getPosition())
+				{
+					enemies[i].setScale(0, 0);
+					flower.setScale(0, 0);
+				}
+			}
 		}
 
 		while (lag >= frameTime)
